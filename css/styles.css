@@ -63,6 +63,21 @@ h5 {
     font-weight: 300;
 }
 
+#welcome{
+	color: rgb(5, 181, 231);
+	font-size: 200%;
+	font-family: 'Roboto Condensed', sans-serif;
+	padding-bottom: -15px;
+}
+
+#name1{
+	color:seashell;
+	font-size: 800%;
+	font-family: 'Alumni Sans', sans-serif;
+	padding-top: -15px;
+}
+
+
 
 /* FORM GROUPS */
 
@@ -126,6 +141,17 @@ h5 {
 section {
 	padding: 120px 0px;
 }
+
+.section-head{
+	font-family: 'Alumni Sans', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 250%;
+    color: white;
+    text-align: center;
+    text-shadow: 5px 5px 10px rgb(22, 182, 234);
+}
+
 /* HEADER */
 
 #header {
@@ -135,13 +161,13 @@ section {
 	padding: 0px;
 }
 
-#header .container {
+/* #header .container {
 	background: url(../images/body-bg1.png) repeat 0 0;
 	height: 100vh;
 	width: 100% !important;
 	padding: 0px;	
 	z-index: 998;
-}
+} */
 
 #header .col-md-8 {
 	top: 20%;
@@ -173,14 +199,14 @@ section {
 #header .fa-angle-down {
 	text-align: center;
 	font-size: 48px;
-	color: #fff;
+	color: white;
 	
 	-webkit-animation: leweb_fade_move_down 2s ease-in-out infinite;
 	-moz-animation: leweb_fade_move_down 2s ease-in-out infinite;
 	animation: leweb_fade_move_down 2s ease-in-out infinite;
    }
 
-	/* Animated Arrow Down Header */
+   /* Animated Arrow Down Header */
 	
 @-webkit-keyframes leweb_fade_move_down {
   0%   { -webkit-transform:translate(0,-20px); opacity: 0;  }
@@ -209,6 +235,28 @@ section {
 	line-height: 175px;
 	height: 175px;
 	width: 175px;
+}
+
+#about{
+	color:black;
+}
+
+#about-text{
+	text-align: justify;
+	width:55%;
+	font-family: 'Noto Serif JP', serif;
+}
+
+#about-image {
+	height: 305px;
+	width: 40%;
+    background: linear-gradient(to right, rgba(22, 182, 234, 0.5),rgba(255,255,255,1)), url('../images/comp.jpg') no-repeat;
+}
+
+.design-flex{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 /* SUBSCRIBE */
@@ -406,3 +454,72 @@ section {
 	}
 }
 
+/* Cards CSS Edits */
+.fullCard {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	width: 30%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin: 10px 5px;
+	padding: 2%;
+  }
+  .cardContent {
+	padding: 10px;
+  }
+  .cardText {
+	margin-bottom: 30px;
+  }
+  
+  #d1st, #d2nd, #d3rd{
+	display: flex;
+	flex-direction: row;
+	justify-content: center; 
+	color:white;
+
+  }
+
+/* About Card */
+.about-image{
+	max-width:290px;
+	max-height:400px;
+}
+
+.fullCard{
+	background-color: rgba(0, 142, 214, 1);
+	width:300px;
+	height:400px;
+}
+
+.card{
+	position:relative;
+	width:300px;
+	height:400px;
+	transform-style: preserve-3d;
+}
+
+.card .face{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	transition: 2s ease-in-out;
+	backface-visibility: hidden;
+	transform:perspective(500px) rotateY(0deg);
+}
+
+.card:hover .face.front{
+	transform:perspective(500px) rotateY(180deg);
+}
+
+.card .face .back{
+	transform:perspective(500px) rotateY(180deg);
+}
+
+.card:hover .face.back{
+	transform:perspective(500px) rotateY(360deg);
+}
