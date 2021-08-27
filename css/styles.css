@@ -462,24 +462,29 @@ section {
 	border-radius: 5px;
 	margin: 10px 5px;
 	padding: 2%;
+	background-color: rgba(0, 142, 214, 0.4);
+	width: 30%;
+	height:400px;
+	color: white;
   }
+
+  #d1st, #d2nd, #d3rd{
+	display: inline-block;
+  }
+
   .cardContent {
 	padding: 10px;
   }
   .cardText {
 	margin-bottom: 30px;
   }
-  
-  #d1st, #d2nd, #d3rd{
-	display: flex;
-	flex-direction: row;
-	justify-content: center; 
-	color:white;
 
-  }
+a{
+	color: black
+}
 
 /* About Card */
-.about-image{
+/* .about-image{
 	max-width:290px;
 	max-height:400px;
 }
@@ -522,4 +527,4 @@ section {
 
 .card:hover .face.back{
 	transform:perspective(500px) rotateY(360deg);
-}
+} */
